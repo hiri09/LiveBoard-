@@ -1,7 +1,11 @@
 package router
 
-import "github.com/gin-gonic/gin"
+import (
+	"go-practice/middleware"
+
+	"github.com/gin-gonic/gin"
+)
 
 func RouteIncomingurl(r *gin.Engine) {
-
+	r.POST("/SingIn", middleware.LoginMiddleWare)
 }
